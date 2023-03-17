@@ -5,44 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>www.uma.edu.sv</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
-    <nav></nav>
+    <nav class="red darken-4"></nav>
     <div class="container">
         <div class="row">
-            <div class="col s12">
-                <h1>Example Promotion Table</h1>
-                <p>
-                    If we want 3 divs that are equal size, we define the divs with a width of 4-columns, as 4+4+4 nicely adds up to 12. Inside those divs, we can put our content. Take our front page content for example. We've modified it slightly for the sake of this example.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s4">
-                <img class="responsive-img" src="imgs/encendiendo.png" alt="">
-                <h2>Speeds up development</h2>
-                <p>
-                    We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components.
-                </p>
-            </div>
-            <div class="col s4">
-                <img class="responsive-img" src="imgs/pareja.png" alt="">
-                <h2>
-                    User Experience Focused
-                </h2>
-                <p>
-                    By utilizing elements and principles of Material Design, we were able to create a framework that focuses on User Experience.
-                </p>
-            </div>
-            <div class="col s4">
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3uS4IIVD7Ds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <form action="" class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input type="text" class="validate" id="nombre">
+                        <label for="nombre">Nombres Completo</label>
+                    </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="date" name="fecha_cacimiento" id="fechanac">
+                        <label for="fechanac">Fecha Nacimiento</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field-col s6">
+                    <select>
+                        <option value="" disabled selected>Elegir Genero</option>
+                        <option value="f">Femenino</option>
+                        <option value="m">Masculino</option>
+                        <option value="x">X</option>
+                      </select>
+                        <label for="sexo">Genero</label>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+         $(document).ready(function(){
+            $('select').formSelect();
+        });
+    </script>
 </body>
 </html>
